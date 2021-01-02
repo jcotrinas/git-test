@@ -16,3 +16,10 @@ git push -u origin main
 
 …or import code from another repository
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+...Or para actualizar directamente 
+git branch -M main
+git push -u origin main
+
+//////// comandos de git /////////
+//////  https://www.git-tower.com/learn/cheat-sheets/git/   //////
