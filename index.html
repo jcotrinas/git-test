@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <h1>var, let y const</h1>
+    <p>var era ES5, no ayuda a tener código limpio y sin problemas</p>
+    <p>let y const en ES6, let es similar a var, pero se ajusta al scope similar a otros lenguajes, entonces es mejor usar let en lugar de var cuando el valor de la variable cambiará en el tiempo.</p>
+    <p>Si el valor no cambiará es mejor usar const, éste último funciona similar a let, en cuanto al alcance, sólo que cuando se quiere cambiar su valor, sale error</p>
+    <br/>
     <h1>localStorage</h1>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit quibusdam quo numquam vitae cupiditate suscipit soluta necessitatibus pariatur, velit iure?</p>
     <button class="clsBtn" onclick="myFunction()" id="btn">Click me</button>
     <button class="clsBtn" onclick="getNombre()" id="btn2">LocalStorage</button>
-    <br/>
-    <h1>Array.forEach()</h1>
-    <button class="clsBtn" onclick="arrayforEach()" id="btn3">test forEach</button>
     <br/>
     <h1>Map vs. forEach</h1>
     <p>Ambos pueden operar sobre un array</p>
@@ -33,7 +35,14 @@
     </ul>
     <br/>
     <h1>Método MAP, FILTER y REDUCE en javascript</h1>
-
+    <button class="clsBtn" onclick="usoMap()" id="btn8">Uso Map</button>
+    <h1>Leer JSON Object</h1>
+    <br/>
+    <button class="clsBtn" onclick="readJSON()" id="btn6">Leer JSON</button>
+    <br/>
+    <br/>
+    <h1>Uso de Fetch()</h1>
+    <button class="clsBtn" onclick="usoFetch()" id="btn7">Uso fetch</button>
     
 </body>
 </html>

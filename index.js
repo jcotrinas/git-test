@@ -1,3 +1,4 @@
+
 function myFunction(){
     const btn = document.getElementById('btn');
     if (localStorage.getItem('btn')==="me has hecho click"){
@@ -61,4 +62,31 @@ function myMap(){
     });
 
     milista.appendChild(fragment);
+}
+/*
+async function readJSON(){
+    const data = await fetch('data1.json')
+                        .then(data => data.json());
+    console.log(data);
+    let arrScores = await data._items.map(
+        function (e){
+            e.score;
+        });
+       // el => el.score);
+    //console.log(arrScores);
+}
+*/
+async function usoFetch(){
+    const datax = await fetch('data1.json')
+                        .then(datax => datax.json());
+    console.log(datax);
+
+}
+
+function usoMap(){
+    //recorre los elementos, los multiplica y finalmente filtra por los >5
+    let arr = [1, 2, 3,4,5];
+    let arr2 = arr.map(n => n*2).filter(n=> n>5);
+    console.log(arr);
+    console.log(arr2);
 }
