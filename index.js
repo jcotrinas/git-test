@@ -29,14 +29,8 @@ function getNombre(){
     alert( user.name ); // Juan
 }
 
-function arrayforEach(){
-    const btn3= document.querySelector('#btn3');
-    //para recorrer un array
-    const array1 = ['Hola', 'y adiós'];
-    array1.forEach(e => alert(e));
-}
 
-function mapforEach(){
+function myforeach(){
     const milista = document.getElementById('milista');
     let array1 = ['Uno', 'Dos', 'Tres'];
 
@@ -51,4 +45,20 @@ function mapforEach(){
 
     milista.appendChild(fragment);
     
+}
+
+function myMap(){
+    const milista = document.getElementById('milista');
+    let array2 = ['1', '2', '3'];
+
+    const fragment = document.createDocumentFragment();
+    const template = document.querySelector('#template-lista').content;
+
+    array2.map((e)=>{
+        template.querySelector('span').textContent=e;
+        const clone = template.cloneNode(true);
+        fragment.appendChild(clone);
+    });
+
+    milista.appendChild(fragment);
 }
