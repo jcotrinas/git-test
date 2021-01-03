@@ -31,6 +31,24 @@ function getNombre(){
 
 function arrayforEach(){
     const btn3= document.querySelector('#btn3');
-    const array1 = ['Juan', 'Lucas', 'Pedro', 'María'];
+    //para recorrer un array
+    const array1 = ['Hola', 'y adiós'];
     array1.forEach(e => alert(e));
+}
+
+function mapforEach(){
+    const milista = document.getElementById('milista');
+    let array1 = ['Uno', 'Dos', 'Tres'];
+
+    const fragment = document.createDocumentFragment();
+    const template = document.querySelector('#template-lista').content;
+
+    array1.forEach((e) => {
+        template.querySelector('span').textContent=e;
+        const clone = template.cloneNode(true);
+        fragment.appendChild(clone);
+    });
+
+    milista.appendChild(fragment);
+    
 }
