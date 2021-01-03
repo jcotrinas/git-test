@@ -13,3 +13,17 @@ function myFunction(){
     }
     
 }
+
+/* 
+1) localStorage guarda incluso cuando se cierran las pestañas del navegador, incluso cuando se reinicia la máquina.
+2) es accesible siempre en cuando se tenga el mismo origen: a) mismo protocolo, b) mismo dominio, c) mismo puerto. La URL puede ser diferente.
+c) métodos localStorage y sessionStorage: setItem(key, value) getItem(key), removeItem(key), clear() <borra todo>.
+*/
+
+function getNombre(){
+    const btn2 = document.querySelector('#btn2');
+    sessionStorage.user = JSON.stringify({name: "Juan"});
+    // luego podemos recuperar
+    let user = JSON.parse( sessionStorage.user );
+    alert( user.name ); // Juan
+}
