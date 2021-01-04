@@ -63,19 +63,7 @@ function myMap(){
 
     milista.appendChild(fragment);
 }
-/*
-async function readJSON(){
-    const data = await fetch('data1.json')
-                        .then(data => data.json());
-    console.log(data);
-    let arrScores = await data._items.map(
-        function (e){
-            e.score;
-        });
-       // el => el.score);
-    //console.log(arrScores);
-}
-*/
+
 async function usoFetch(){
     const datax = await fetch('data1.json')
                         .then(datax => datax.json());
@@ -89,4 +77,48 @@ function usoMap(){
     let arr2 = arr.map(n => n*2).filter(n=> n>5);
     console.log(arr);
     console.log(arr2);
+}
+
+function usoMapotro(){
+    var orders = [ { "name" : "chain", "description" : "necklace chain", "status": "shipped"} , {"name": "pen", "description" : "ball pen", "status": "shipped"}, {"name": "book", "description" : "travel diary", "status": "delivered"},{"name": "brush", "description" : "paint brush", "status": "delivered"}];
+    console.log(orders); 
+    var orderInfo = orders.map( function(order) {
+    if( order.status === "delivered"){
+        var info = { "orderName": order.name,
+                    "orderDesc": order.description
+                    }
+        return info;
+    }
+    });
+    console.log(orderInfo);
+}
+
+function usoMapobjeto() {
+    let persons = [
+        {firstname : "Lucas", lastname: "Reyes"},
+        {firstname : "María", lastname: "Torres"},
+        {firstname : "Juan", lastname: "Sánchez"}
+      ];
+    
+    document.getElementById("spanfullname").innerHTML = 
+    persons.map(function getFullName(item) {
+        let fullname = [item.firstname,item.lastname].join(" ");
+        return fullname;
+      });
+
+}
+
+
+//Uso de map() en json para obtener lo buscado
+async function readJSON(){
+    const data = await fetch('data1.json')
+                        .then(data => data.json());
+    console.log(data);
+    
+    let data2 = data.map(function getScore(item){
+        let theScore = item.score;
+        return theScore;
+    });
+    
+    console.log(data2);
 }
